@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+  }
+  body {
+    background-color: #f6f0c4;
+    background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  .clock {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 50%;
+    border: 2px solid black;
+    position: relative;
+  }
+  .clock p{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    bottom: 100px;
+    left: 60%;
+    font-size:50px;
+    transform: translateX(-50%);
+    letter-spacing: 2ch;
+   color: #F67062;
+    
+  }
+  .clock .nbr {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .clock .nbr1 { --rotation: 30deg; }
+  .clock .nbr2 { --rotation: 60deg; }
+  .clock .nbr3 { --rotation: 90deg; }
+  .clock .nbr4 { --rotation: 120deg; }
+  .clock .nbr5 { --rotation: 150deg; }
+  .clock .nbr6 { --rotation: 180deg; }
+  .clock .nbr7 { --rotation: 210deg; }
+  .clock .nbr8 { --rotation: 240deg; }
+  .clock .nbr9 { --rotation: 270deg; }
+  .clock .nbr10 { --rotation: 300deg; }
+  .clock .nbr11 { --rotation: 330deg; }
+
+  .clock .clo {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  }
+  .clock::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  .clock .clo.second {
+    width: 3px;
+    height: 45%;
+    background-color: red;
+  }
+  
+  .clock .clo.minute {
+    width: 7px;
+    height: 40%;
+    background-color: black;
+  }
+  
+  .clock .clo.hour {
+    width: 10px;
+    height: 35%;
+    background-color: black;
+  }
+
+  .horloge {
+      font-size: 5em;
+      text-align: center;
+      margin: 30px;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  span{
+      padding: 30px;
+      border-radius: 50%;
+      background-color: #F67062;
+  }
+
